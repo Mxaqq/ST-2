@@ -8,164 +8,164 @@
 
 const double EPS = 0.001;
 
-TEST(Circle, ckekGetRadius) {
+TEST(ST2, ckekGetRadius) {
     Circle circle;
     circle.setRadius(5);
     EXPECT_NEAR(circle.getRadius(), 5.0, EPS);
 }
 
-TEST(Circle, ckekGetFerence) {
+TEST(ST2, ckekGetFerence) {
     Circle circle;
     circle.setFerence(5);
     EXPECT_NEAR(circle.getFerence(), 5.0, EPS);
 }
 
-TEST(Circle, ckekGetArea) {
+TEST(ST2, ckekGetArea) {
     Circle circle;
     circle.setArea(5);
     EXPECT_NEAR(circle.getArea(), 5.0, EPS);
 }
 
-TEST(Circle, ckekSetRadius_GetFerence) {
+TEST(ST2, ckekSetRadius_GetFerence) {
     Circle circle;
     circle.setRadius(5);
     EXPECT_NEAR(circle.getFerence(), 31.41593, EPS);
 }
 
-TEST(Circle, ckekSetRadius_GetArea) {
+TEST(ST2, ckekSetRadius_GetArea) {
     Circle circle;
     circle.setRadius(5);
     EXPECT_NEAR(circle.getArea(), 78.53982, EPS);
 }
 
-TEST(Circle, ckekSetFerence_GetRadius) {
+TEST(ST2, ckekSetFerence_GetRadius) {
     Circle circle;
     circle.setFerence(5);
     EXPECT_NEAR(circle.getRadius(), 0.79617, EPS);
 }
 
-TEST(Circle, ckekSetFerence_GetArea) {
+TEST(ST2, ckekSetFerence_GetArea) {
     Circle circle;
     circle.setFerence(5);
     EXPECT_NEAR(circle.getArea(), 1.9894367, EPS);
 }
 
-TEST(Circle, ckekSetArea_GetRadius) {
+TEST(ST2, ckekSetArea_GetRadius) {
     Circle circle;
     circle.setArea(5);
     EXPECT_NEAR(circle.getRadius(), 1.2615662, EPS);
 }
 
-TEST(Circle, ckekSetArea_GetFerence) {
+TEST(ST2, ckekSetArea_GetFerence) {
     Circle circle;
     circle.setArea(5);
     EXPECT_NEAR(circle.getFerence(), 7.9266545, EPS);
 }
 
-TEST(Circle, ckekSetRadius_GetFerence_pi) {
+TEST(ST2, ckekSetRadius_GetFerence_pi) {
     Circle circle;
     circle.setRadius(1);
     EXPECT_NEAR(circle.getFerence(), 2 * M_PI, EPS);
 }
 
-TEST(Circle, ckekSetRadius_GetArea_pi) {
+TEST(ST2, ckekSetRadius_GetArea_pi) {
     Circle circle;
     circle.setRadius(1);
     EXPECT_NEAR(circle.getArea(), M_PI, EPS);
 }
 
-TEST(Circle, ckekSetFerence_GetRadius_pi) {
+TEST(ST2, ckekSetFerence_GetRadius_pi) {
     Circle circle;
     circle.setFerence(2 * M_PI);
     EXPECT_NEAR(circle.getRadius(), 1, EPS);
 }
 
-TEST(Circle, ckekSetFerence_GetArea_pi) {
+TEST(ST2, ckekSetFerence_GetArea_pi) {
     Circle circle;
     circle.setFerence(2 * M_PI);
     EXPECT_NEAR(circle.getArea(), M_PI, EPS);
 }
 
-TEST(Circle, ckekSetArea_GetRadius_pi) {
+TEST(ST2, ckekSetArea_GetRadius_pi) {
     Circle circle;
     circle.setArea(M_PI);
     EXPECT_NEAR(circle.getRadius(), 1, EPS);
 }
 
-TEST(Circle, ckekSetArea_GetFerence_pi) {
+TEST(ST2, ckekSetArea_GetFerence_pi) {
     Circle circle;
     circle.setArea(M_PI);
     EXPECT_NEAR(circle.getFerence(), 2 * M_PI, EPS);
 }
 
-TEST(Circle, ckekSetRadius_GetFerence_0) {
+TEST(ST2, ckekSetRadius_GetFerence_0) {
     Circle circle;
     circle.setRadius(0);
     EXPECT_NEAR(circle.getFerence(), 0, EPS);
 }
 
-TEST(Circle, ckekSetRadius_GetArea_0) {
+TEST(ST2, ckekSetRadius_GetArea_0) {
     Circle circle;
     circle.setRadius(0);
     EXPECT_NEAR(circle.getArea(), 0, EPS);
 }
 
-TEST(Circle, ckekSetFerence_GetRadius_0) {
+TEST(ST2, ckekSetFerence_GetRadius_0) {
     Circle circle;
     circle.setFerence(0);
     EXPECT_NEAR(circle.getRadius(), 0, EPS);
 }
 
-TEST(Circle, ckekSetFerence_GetArea_0) {
+TEST(ST2, ckekSetFerence_GetArea_0) {
     Circle circle;
     circle.setFerence(0);
     EXPECT_NEAR(circle.getArea(), 0, EPS);
 }
 
-TEST(Circle, ckekSetArea_GetRadius_0) {
+TEST(ST2, ckekSetArea_GetRadius_0) {
     Circle circle;
     circle.setArea(0);
     EXPECT_NEAR(circle.getRadius(), 0, EPS);
 }
 
-TEST(Circle, ckekSetArea_GetFerence_0) {
+TEST(ST2, ckekSetArea_GetFerence_0) {
     Circle circle;
     circle.setArea(0);
     EXPECT_NEAR(circle.getFerence(), 0, EPS);
 }
 
 
-TEST(Circle, ckekSetRadius_GetFerence_negativ) {
+TEST(ST2, ckekSetRadius_GetFerence_negativ) {
     Circle circle;
     circle.setRadius(-1);
     EXPECT_NEAR(circle.getFerence(), 0, EPS);
 }
 
-TEST(Circle, ckekSetRadius_GetArea_negative) {
+TEST(ST2, ckekSetRadius_GetArea_negative) {
     Circle circle;
     circle.setRadius(-1);
     EXPECT_NEAR(circle.getArea(), 0, EPS);
 }
 
-TEST(Circle, ckekSetFerence_GetRadius_negative) {
+TEST(ST2, ckekSetFerence_GetRadius_negative) {
     Circle circle;
     circle.setFerence(-1);
     EXPECT_NEAR(circle.getRadius(), 0, EPS);
 }
 
-TEST(Circle, ckekSetFerence_GetArea_negative) {
+TEST(ST2, ckekSetFerence_GetArea_negative) {
     Circle circle;
     circle.setFerence(-1);
     EXPECT_NEAR(circle.getArea(), 0, EPS);
 }
 
-TEST(Circle, ckekSetArea_GetRadius_negative) {
+TEST(ST2, ckekSetArea_GetRadius_negative) {
     Circle circle;
     circle.setArea(-1);
     EXPECT_NEAR(circle.getRadius(), 0, EPS);
 }
 
-TEST(Circle, ckekSetArea_GetFerence_negative) {
+TEST(ST2, ckekSetArea_GetFerence_negative) {
     Circle circle;
     circle.setArea(-1);
     EXPECT_NEAR(circle.getFerence(), 0, EPS);
