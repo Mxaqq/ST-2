@@ -1,6 +1,11 @@
 // Copyright 2022 UNN-CS
 #include <cstdint>
 #include <cmath>
+
+#ifndef M_PI
+#define M_PI 3.14159265358979323846
+#endif
+
 #include "circle.h"
 
 void Circle::setRadius(double radius) {
