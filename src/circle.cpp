@@ -29,9 +29,7 @@ void Circle::setRadius(double radius) {
     if (radius < 0) {
         this->radius = 0;
     }
-    else {
-        this->radius = radius;
-    }
+    else { this->radius = radius; }
     updateFromRadius();
 }
 
@@ -39,9 +37,7 @@ void Circle::setFerence(double ference) {
     if (ference < 0) {
         this->ference = 0;
     }
-    else {
-        this->ference = ference;
-    }
+    else { this->ference = ference; }
     updateFromFerence();
 }
 
@@ -49,9 +45,7 @@ void Circle::setArea(double area) {
     if (area < 0) {
         this->area = 0;
     }
-    else {
-        this->area = area;
-    }
+    else { this->area = area; }
     updateFromArea();
 }
 
