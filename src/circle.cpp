@@ -1,6 +1,6 @@
+// Copyright 2022 UNN-CS
 #include "circle.h"
 #include <cmath>
-#include <stdexcept>
 
 #ifndef M_PI
 #define M_PI 3.14159265358979323846
@@ -27,25 +27,31 @@ Circle::Circle(double r) {
 
 void Circle::setRadius(double radius) {
     if (radius < 0) {
-        throw std::invalid_argument("Radius cannot be negative");
+        this->radius = 0;
     }
-    this->radius = radius;
+    else {
+        this->radius = radius;
+    }
     updateFromRadius();
 }
 
 void Circle::setFerence(double ference) {
     if (ference < 0) {
-        throw std::invalid_argument("Ference cannot be negative");
+        this->ference = 0;
     }
-    this->ference = ference;
+    else {
+        this->ference = ference;
+    }
     updateFromFerence();
 }
 
 void Circle::setArea(double area) {
     if (area < 0) {
-        throw std::invalid_argument("Area cannot be negative");
+        this->area = 0;
     }
-    this->area = area;
+    else {
+        this->area = area;
+    }
     updateFromArea();
 }
 
