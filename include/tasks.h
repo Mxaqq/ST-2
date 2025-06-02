@@ -3,7 +3,7 @@
 #define INCLUDE_TASKS_H_
 #include <cstdint>
 
-double Earth();
-double track_cost();
+double calculateEarthRopeGap();
+double calculatePoolConstructionCost();
 
 #endif  // INCLUDE_TASKS_H_
