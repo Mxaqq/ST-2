@@ -8,7 +8,7 @@
 #endif
 
 class Circle {
-private:
+ private:
     double radius;
     double ference;
     double area;
@@ -28,7 +28,7 @@ private:
         ference = 2 * M_PI * radius;
     }
 
-public:
+ public:
     explicit Circle(double r = 0) {
         setRadius(r);
     }
