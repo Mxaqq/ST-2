@@ -4,22 +4,22 @@
 #include "tasks.h"
 
 double Earth() {
-    double t_radius = 6378100;
-    Circle circle;
-    circle.setRadius(t_radius);
-    double t_l = circle.getFerence();
-    circle.setFerence(t_l + 1);
-
-    return circle.getRadius() - t_radius;
+    const double earthRadius = 6378100;
+    Circle earth(earthRadius);
+    double originalFerence = earth.getFerence();
+    earth.setFerence(originalFerence + 1.0);
+    return earth.getRadius() - earthRadius;
 }
 
 double track_cost() {
-    Circle circle;
-    circle.setRadius(3);
-    double S_b = circle.getArea();
+    Circle pool(3.0);
+    double poolArea = pool.getArea();
 
-    circle.setRadius(4);
-    double s = circle.getArea() - S_b;
+    Circle poolWithTrack(4.0);
+    double trackArea = poolWithTrack.getArea() - poolArea;
 
-    return s * 1000 + circle.getFerence() * 2000;
+    double concreteCost = trackArea * 1000.0;
+    double fenceCost = poolWithTrack.getFerence() * 2000.0;
+
+    return concreteCost + fenceCost;
 }

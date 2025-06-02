@@ -5,16 +5,24 @@
 
 
 class Circle {
- private:
-     double radius = 0; // Радиус
-     double ference = 0; // Длина окружности
-     double area = 0; // Площадь круга
- public:
-     void setRadius(double radius);
-     void setFerence(double ference);
-     void setArea(double area);
-     double getRadius();
-     double getFerence();
-     double getArea();
+private:
+    double radius;
+    double ference;
+    double area;
+
+    void updateFromRadius();
+    void updateFromFerence();
+    void updateFromArea();
+
+public:
+    explicit Circle(double r = 0);
+
+    void setRadius(double radius);
+    void setFerence(double ference);
+    void setArea(double area);
+
+    double getRadius() const;
+    double getFerence() const;
+    double getArea() const;
 };
 #endif  // INCLUDE_CIRCLE_H_
